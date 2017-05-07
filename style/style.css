@@ -1,2 +1,27 @@
-body{margin:0;height:100%;min-height:100%;font-family:Verdana, Geneva, sans-serif;font-size:14px}
+/*-----------------------------------
+colors
+-----------------------------------*/
+/*-----------------------------------
+vars
+-----------------------------------*/
+.wr {
+  position: relative;
+  max-width: 1170px;
+  padding: 0 30px; }
+
+body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  color: white;
+  line-height: 1.5;
+  background: #191e3f; }
+
+header {
+  position: relative;
+  background: no-repeat center / cover;
+  min-height: 100vh; }
+
 /*# sourceMappingURL=style.css.map */
