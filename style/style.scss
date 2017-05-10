@@ -40,6 +40,10 @@ header{
       flex-basis: 100%;
       text-align: center;
 
+      @media (max-width: $middle_size) {
+        text-align: left;
+      }
+
       .logo{
         display:inline-block;
         width: 127px;

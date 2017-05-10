@@ -59,6 +59,9 @@ header {
       position: relative;
       flex-basis: 100%;
       text-align: center; }
+      @media (max-width: 768px) {
+        header > .wr > .row-1 {
+          text-align: left; } }
       header > .wr > .row-1 .logo {
         display: inline-block;
         width: 127px;
