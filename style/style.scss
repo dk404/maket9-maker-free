@@ -97,7 +97,7 @@ header{
   }
 
 }
-.mission{
+section.mission{
   position: relative;
   min-height: 100vh;
 
@@ -112,7 +112,6 @@ header{
     &>.el-1{
       left: 0;
       position: absolute;
-      min-height: inherit;
       width: 100%;
       padding: 0 30px;
       box-sizing: border-box;
@@ -121,21 +120,105 @@ header{
         position: relative;
         display: block;
         margin: 0 auto;
-        max-width: percentage(650px / $maw);
+        max-width: percentage(570px / $maw);
 
         span{
           position: relative;
           display:block;
           padding-top: 100%;
           background: no-repeat center / cover;
-          box-shadow:  0px 48px 84px 17px #111428;
+          box-shadow:  0 48px 84px 17px #111428;
           will-change: all;
+        }
+      }
+    }
+    &>.el-2{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+
+      &>.col-1{
+        position: relative;
+        width: percentage(223px / $maw);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>.num{
+          color: rgba(white, 0.01);
+          font-family: 'Yantramanav';
+          font-size: 286px;
+          font-weight: 900;
+          line-height: 0;
+        }
+
+        &>.rotate-text{
+          position: absolute;
+          color: rgba(white, .7);
+          font-family: 'Raleway-Lighter';
+          font-size: 26px;
+          font-weight: lighter;
+          transform: rotate(-90deg);
+
+        }
+
+
+      }
+      &>.col-2{
+        width: percentage(475px / $maw);
+
+        p{
+          color: rgba(white, .7);
+          font-family: 'Raleway-Light';
+          font-size: 16px;
+          font-weight: 100;
         }
       }
     }
   }
 }
+section.projects{
+  position: relative;
+  min-height: 100vh;
+  background: no-repeat center / cover;
 
+  &:before{
+    content: '';
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to bottom, $bg, transparent);
+  }
+  &:after{
+    content: '';
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    bottom: 0;
+    background: linear-gradient(to top, $bg, transparent);
+  }
+
+  &>.wr{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &>.el-1{
+      &>.letter{
+        opacity: 0.61;
+        text-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+        color: #191e3f;
+        font-family: 'Raleway-Black';
+        font-size: 650px;
+        font-weight: 900;
+        line-height: 0;
+      }
+    }
+  }
+}
 
 
 
