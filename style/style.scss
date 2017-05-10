@@ -16,7 +16,122 @@ header{
   position: relative;
   background: no-repeat center / cover;
   min-height: 100vh;
+
+  &:before{
+    content: '';
+    display:block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 25vh;
+    background: linear-gradient(to top, $bg, transparent);
+  }
+  
+  &>.wr{
+    display: flex;
+    min-height: inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 30px;
+    box-sizing: border-box;
+
+    &>.row-1{
+      position: relative;
+      flex-basis: 100%;
+      text-align: center;
+
+      .logo{
+        display:inline-block;
+        width: 127px;
+        height: 78px;
+        background: url("../img/logo.png") no-repeat center / contain;
+      }
+      .menu{
+        position: absolute;
+        right: 0;
+        top: 23px;
+        width: 47px;
+        height: 17px;
+
+        &:before{
+          content: '';
+          display:block;
+          height: 4px;
+          background: white;
+          margin-bottom: 10px;
+        }
+        &:after{
+          content: '';
+          display:block;
+          height: 4px;
+          background: white;
+
+
+        }
+        
+        &:hover{
+          &:before, &:after{
+            background-color: $red ;
+            
+          }
+        }
+
+      }
+
+    }
+    &>.row-2{
+      position: relative;
+
+      h1{
+        text-align: center;
+        font-family: 'Raleway-Lighter';
+        font-size: 40px;
+        font-weight: lighter;
+        opacity: .7;
+      }
+    }
+  }
+
 }
+.mission{
+  position: relative;
+  min-height: 100vh;
+
+  &>.wr{
+    position: relative;
+    min-height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &>.el-1{
+      left: 0;
+      position: absolute;
+      min-height: inherit;
+      width: 100%;
+      padding: 0 30px;
+      box-sizing: border-box;
+
+      &>.img{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        max-width: percentage(650px / $maw);
+
+        span{
+          position: relative;
+          display:block;
+          padding-top: 100%;
+          background: no-repeat center / cover;
+          box-shadow:  0px 48px 84px 17px #111428;
+          will-change: all;
+        }
+      }
+    }
+  }
+}
+
 
 
 

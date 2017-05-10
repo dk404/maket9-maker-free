@@ -1,4 +1,19 @@
 /*-----------------------------------
+fonts //http://nomail.com.ua/font/raleway
+-----------------------------------*/
+@font-face {
+  font-family: 'Raleway-Black';
+  src: local("Raleway-Black"), url("https://nomail.com.ua/files/woff/d641109f46a9231b7a92d6a114302a2b.woff") format("woff"); }
+@font-face {
+  font-family: 'Raleway-Lighter';
+  src: local("Raleway-ExtraLight"), url("https://nomail.com.ua/files/woff/ebd5c800e24e108dd3aeacb28e16c595.woff") format("woff"); }
+@font-face {
+  font-family: 'Raleway-Light';
+  src: local("Raleway-Light"), url("https://nomail.com.ua/files/woff/6b562d7ca359ccb3259f570bcceb4f70.woff") format("woff"); }
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: local("Raleway-Regular"), url("https://nomail.com.ua/files/woff/2d4cd8722065da2ac700199273325752.woff") format("woff"); }
+/*-----------------------------------
 colors
 -----------------------------------*/
 /*-----------------------------------
@@ -7,7 +22,9 @@ vars
 .wr {
   position: relative;
   max-width: 1170px;
-  padding: 0 30px; }
+  padding: 0 30px;
+  margin: 0 auto;
+  box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -23,5 +40,86 @@ header {
   position: relative;
   background: no-repeat center / cover;
   min-height: 100vh; }
+  header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 25vh;
+    background: linear-gradient(to top, #191e3f, transparent); }
+  header > .wr {
+    display: flex;
+    min-height: inherit;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 30px;
+    box-sizing: border-box; }
+    header > .wr > .row-1 {
+      position: relative;
+      flex-basis: 100%;
+      text-align: center; }
+      header > .wr > .row-1 .logo {
+        display: inline-block;
+        width: 127px;
+        height: 78px;
+        background: url("../img/logo.png") no-repeat center/contain; }
+      header > .wr > .row-1 .menu {
+        position: absolute;
+        right: 0;
+        top: 23px;
+        width: 47px;
+        height: 17px; }
+        header > .wr > .row-1 .menu:before {
+          content: '';
+          display: block;
+          height: 4px;
+          background: white;
+          margin-bottom: 10px; }
+        header > .wr > .row-1 .menu:after {
+          content: '';
+          display: block;
+          height: 4px;
+          background: white; }
+        header > .wr > .row-1 .menu:hover:before, header > .wr > .row-1 .menu:hover:after {
+          background-color: #d25a5e; }
+    header > .wr > .row-2 {
+      position: relative; }
+      header > .wr > .row-2 h1 {
+        text-align: center;
+        font-family: 'Raleway-Lighter';
+        font-size: 40px;
+        font-weight: lighter;
+        opacity: .7; }
+
+.mission {
+  position: relative;
+  min-height: 100vh; }
+  .mission > .wr {
+    position: relative;
+    min-height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    .mission > .wr > .el-1 {
+      left: 0;
+      position: absolute;
+      min-height: inherit;
+      width: 100%;
+      padding: 0 30px;
+      box-sizing: border-box; }
+      .mission > .wr > .el-1 > .img {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        max-width: 55.55556%; }
+        .mission > .wr > .el-1 > .img span {
+          position: relative;
+          display: block;
+          padding-top: 100%;
+          background: no-repeat center / cover;
+          box-shadow: 0px 48px 84px 17px #111428;
+          will-change: all; }
 
 /*# sourceMappingURL=style.css.map */
