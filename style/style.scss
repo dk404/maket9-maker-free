@@ -251,6 +251,99 @@ section.projects{
     }
   }
 }
+section.team{
+  position: relative;
+  min-height: 100vh;
+  margin-top: 80px;
+
+  &>.wr{
+    min-height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &>.el-1{
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%;
+      padding: 0 30px;
+      box-sizing: border-box;
+      left: 0;
+
+      &>.letter{
+        @extend %letter;
+        align-self: center;
+        margin: auto;
+
+      }
+      &>.num{
+        @extend %num;
+        position: absolute;
+      }
+
+    }
+    &>.el-2{
+      position: relative;
+
+      &>ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li{
+          position: relative;
+          &:first-of-type{
+            flex-basis: 100%;
+          }
+
+          .photo{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background: no-repeat center / cover;
+            box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+          }
+          .text{
+            position: relative;
+            max-width: 330px;
+            
+            &:before{
+              content: '';
+              display:block;
+              width: 45px;
+              height: 5px;
+              background-color: white;
+              margin-bottom: 20px;
+            }
+            .name{
+              position: relative;
+              font-family: Raleway-Lighter;
+              font-size: 32px;
+              font-weight: 100;
+              color: rgba(white, .8);
+            }
+            .spec{
+              color: rgba(white, .5);
+              font-family: Raleway-Lighter;
+              font-size: 17px;
+              font-weight: 100;
+            }
+            .descr{
+              font-family: Raleway-Lighter;
+              font-size: 14px;
+              font-weight: 100;
+              color: rgba(white, .8);
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
 
 
 

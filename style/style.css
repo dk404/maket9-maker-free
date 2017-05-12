@@ -29,7 +29,7 @@ vars
   margin: 0 auto;
   box-sizing: border-box; }
 
-section.projects > .wr > .el-1 > .num {
+section.projects > .wr > .el-1 > .num, section.team > .wr > .el-1 > .num {
   position: relative;
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@ section.projects > .wr > .el-1 > .num {
   font-size: 286px;
   font-weight: 900;
   align-self: flex-start; }
-  section.projects > .wr > .el-1 > .num:before {
+  section.projects > .wr > .el-1 > .num:before, section.team > .wr > .el-1 > .num:before {
     content: attr(data-css);
     display: block;
     position: absolute;
@@ -49,7 +49,7 @@ section.projects > .wr > .el-1 > .num {
     font-weight: 100;
     transform: rotate(-90deg); }
 
-section.projects > .wr > .el-1 > .letter {
+section.projects > .wr > .el-1 > .letter, section.team > .wr > .el-1 > .letter {
   opacity: 0.61;
   text-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
   color: #191e3f;
@@ -237,5 +237,72 @@ section.projects {
           margin-right: 50px; }
           section.projects > .wr > .el-2 > ul li img {
             max-width: 100%; }
+
+section.team {
+  position: relative;
+  min-height: 100vh;
+  margin-top: 80px; }
+  section.team > .wr {
+    min-height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+    section.team > .wr > .el-1 {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%;
+      padding: 0 30px;
+      box-sizing: border-box;
+      left: 0; }
+      section.team > .wr > .el-1 > .letter {
+        align-self: center;
+        margin: auto; }
+      section.team > .wr > .el-1 > .num {
+        position: absolute; }
+    section.team > .wr > .el-2 {
+      position: relative; }
+      section.team > .wr > .el-2 > ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        section.team > .wr > .el-2 > ul li {
+          position: relative; }
+          section.team > .wr > .el-2 > ul li:first-of-type {
+            flex-basis: 100%; }
+          section.team > .wr > .el-2 > ul li .photo {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background: no-repeat center / cover;
+            box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45); }
+          section.team > .wr > .el-2 > ul li .text {
+            position: relative;
+            max-width: 330px; }
+            section.team > .wr > .el-2 > ul li .text:before {
+              content: '';
+              display: block;
+              width: 45px;
+              height: 5px;
+              background-color: white;
+              margin-bottom: 20px; }
+            section.team > .wr > .el-2 > ul li .text .name {
+              position: relative;
+              font-family: Raleway-Lighter;
+              font-size: 32px;
+              font-weight: 100;
+              color: rgba(255, 255, 255, 0.8); }
+            section.team > .wr > .el-2 > ul li .text .spec {
+              color: rgba(255, 255, 255, 0.5);
+              font-family: Raleway-Lighter;
+              font-size: 17px;
+              font-weight: 100; }
+            section.team > .wr > .el-2 > ul li .text .descr {
+              font-family: Raleway-Lighter;
+              font-size: 14px;
+              font-weight: 100;
+              color: rgba(255, 255, 255, 0.8); }
 
 /*# sourceMappingURL=style.css.map */
