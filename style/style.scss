@@ -205,16 +205,48 @@ section.projects{
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     &>.el-1{
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      width:100%;
+      padding: 0 30px;
+      box-sizing: border-box;
+
       &>.letter{
-        opacity: 0.61;
-        text-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
-        color: #191e3f;
-        font-family: 'Raleway-Black';
-        font-size: 650px;
-        font-weight: 900;
-        line-height: 0;
+        @extend %letter;
+      }
+      &>.num{
+        @extend %num;
+        margin-bottom: 20%;
+
+      }
+
+    }
+    &>.el-2{
+      position: relative;
+
+      &>ul{
+        position: relative;
+        list-style: none;
+        max-width: 750px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        li{
+          flex-basis: calc(33% - 50px);
+          margin-right: 50px;
+
+          img{
+            max-width: 100%;
+          }
+        }
       }
     }
   }

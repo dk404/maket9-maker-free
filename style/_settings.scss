@@ -29,8 +29,42 @@ $middle_size: 768px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 .wr{
   @extend %wr;
 }
 
+%num{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(white, 0.01);
+  font-family: 'Yantramanav';
+  font-size: 286px;
+  font-weight: 900;
+  align-self: flex-start;
+
+  &:before{
+    content: attr(data-css);
+    display:block;
+    position: absolute;
+    color: rgba(white, 0.7);
+    font-family: 'Raleway-Lighter';
+    font-size: 26px;
+    font-weight: 100;
+    transform: rotate(-90deg);
+
+  }
+
+
+}
+%letter{
+  opacity: 0.61;
+  text-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+  color: #191e3f;
+  font-family: 'Raleway-Black';
+  font-size: 650px;
+  font-weight: 900;
+  line-height: 0;
+
+}
