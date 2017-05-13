@@ -269,40 +269,63 @@ section.team {
         flex-wrap: wrap;
         justify-content: space-between; }
         section.team > .wr > .el-2 > ul li {
-          position: relative; }
-          section.team > .wr > .el-2 > ul li:first-of-type {
-            flex-basis: 100%; }
+          position: relative;
+          flex-basis: 45%;
+          box-sizing: border-box; }
+          section.team > .wr > .el-2 > ul li:nth-of-type(2) {
+            flex: 1;
+            margin-bottom: 70px; }
+            section.team > .wr > .el-2 > ul li:nth-of-type(2) .photo {
+              width: 450px;
+              height: 450px; }
+              section.team > .wr > .el-2 > ul li:nth-of-type(2) .photo .text {
+                left: -150px; }
+          section.team > .wr > .el-2 > ul li:nth-of-type(3) .text {
+            left: 80%; }
+          section.team > .wr > .el-2 > ul li:nth-of-type(4) {
+            padding: 140px 0 0 50px; }
+            section.team > .wr > .el-2 > ul li:nth-of-type(4) .text {
+              left: -80px; }
+          section.team > .wr > .el-2 > ul li:nth-of-type(5) {
+            padding: 0 0 0 107px; }
+            section.team > .wr > .el-2 > ul li:nth-of-type(5) .text {
+              left: -80px; }
+          section.team > .wr > .el-2 > ul li:nth-of-type(6) {
+            padding: 200px 0 0 0; }
+            section.team > .wr > .el-2 > ul li:nth-of-type(6) .text {
+              left: 55%; }
           section.team > .wr > .el-2 > ul li .photo {
+            position: relative;
             width: 300px;
             height: 300px;
-            position: absolute;
             background: no-repeat center / cover;
             box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45); }
-          section.team > .wr > .el-2 > ul li .text {
-            position: relative;
-            max-width: 330px; }
-            section.team > .wr > .el-2 > ul li .text:before {
-              content: '';
-              display: block;
-              width: 45px;
-              height: 5px;
-              background-color: white;
-              margin-bottom: 20px; }
-            section.team > .wr > .el-2 > ul li .text .name {
-              position: relative;
-              font-family: Raleway-Lighter;
-              font-size: 32px;
-              font-weight: 100;
-              color: rgba(255, 255, 255, 0.8); }
-            section.team > .wr > .el-2 > ul li .text .spec {
-              color: rgba(255, 255, 255, 0.5);
-              font-family: Raleway-Lighter;
-              font-size: 17px;
-              font-weight: 100; }
-            section.team > .wr > .el-2 > ul li .text .descr {
-              font-family: Raleway-Lighter;
-              font-size: 14px;
-              font-weight: 100;
-              color: rgba(255, 255, 255, 0.8); }
+            section.team > .wr > .el-2 > ul li .photo .text {
+              position: absolute;
+              bottom: 30px;
+              width: 330px; }
+              section.team > .wr > .el-2 > ul li .photo .text:before {
+                content: '';
+                display: block;
+                width: 45px;
+                height: 5px;
+                background-color: white;
+                margin-bottom: 20px; }
+              section.team > .wr > .el-2 > ul li .photo .text .name {
+                position: relative;
+                font-family: Raleway-Lighter;
+                font-size: 32px;
+                font-weight: 100;
+                color: rgba(255, 255, 255, 0.8); }
+              section.team > .wr > .el-2 > ul li .photo .text .spec {
+                color: rgba(255, 255, 255, 0.5);
+                font-family: Raleway-Lighter;
+                font-size: 17px;
+                font-weight: 100; }
+              section.team > .wr > .el-2 > ul li .photo .text .descr {
+                font-family: Raleway-Lighter;
+                font-size: 14px;
+                font-weight: 100;
+                color: rgba(255, 255, 255, 0.8); }
 
 /*# sourceMappingURL=style.css.map */
