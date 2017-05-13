@@ -29,7 +29,7 @@ vars
   margin: 0 auto;
   box-sizing: border-box; }
 
-section.projects > .wr > .el-1 > .num, section.team > .wr > .el-1 > .num {
+section.projects > .wr > .el-1 > .num, section.team > .wr > .el-1 > .num, section.event > .wr > .el-1 > .num {
   position: relative;
   display: flex;
   justify-content: center;
@@ -39,7 +39,7 @@ section.projects > .wr > .el-1 > .num, section.team > .wr > .el-1 > .num {
   font-size: 286px;
   font-weight: 900;
   align-self: flex-start; }
-  section.projects > .wr > .el-1 > .num:before, section.team > .wr > .el-1 > .num:before {
+  section.projects > .wr > .el-1 > .num:before, section.team > .wr > .el-1 > .num:before, section.event > .wr > .el-1 > .num:before {
     content: attr(data-css);
     display: block;
     position: absolute;
@@ -49,7 +49,7 @@ section.projects > .wr > .el-1 > .num, section.team > .wr > .el-1 > .num {
     font-weight: 100;
     transform: rotate(-90deg); }
 
-section.projects > .wr > .el-1 > .letter, section.team > .wr > .el-1 > .letter {
+section.projects > .wr > .el-1 > .letter, section.team > .wr > .el-1 > .letter, section.event > .wr > .el-1 > .letter {
   opacity: 0.61;
   text-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
   color: #191e3f;
@@ -271,7 +271,8 @@ section.team {
         section.team > .wr > .el-2 > ul li {
           position: relative;
           flex-basis: 45%;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+          z-index: 1; }
           section.team > .wr > .el-2 > ul li:nth-of-type(2) {
             flex: 1;
             margin-bottom: 70px; }
@@ -327,5 +328,85 @@ section.team {
                 font-size: 14px;
                 font-weight: 100;
                 color: rgba(255, 255, 255, 0.8); }
+
+section.event {
+  position: relative;
+  min-height: 100vh;
+  margin-top: 200px;
+  background: no-repeat center / cover; }
+  section.event:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(to bottom, #191e3f, transparent); }
+  section.event > .wr {
+    position: relative;
+    min-height: inherit; }
+    section.event > .wr > .el-1 {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 100px 30px 0 0;
+      box-sizing: border-box; }
+      section.event > .wr > .el-1 > .letter {
+        align-self: flex-end;
+        position: absolute;
+        line-height: 1;
+        right: 150px; }
+      section.event > .wr > .el-1 > .num {
+        align-self: center;
+        font-size: 190px;
+        color: rgba(255, 255, 255, 0.02);
+        top: 45px;
+        left: 80px; }
+    section.event > .wr > .el-2 {
+      position: relative;
+      display: flex;
+      min-height: inherit;
+      align-items: center; }
+      section.event > .wr > .el-2 > .content {
+        max-width: 480px; }
+        section.event > .wr > .el-2 > .content h3 {
+          color: rgba(255, 255, 255, 0.8);
+          font-family: Raleway-Lighter;
+          font-size: 48px;
+          font-weight: lighter; }
+        section.event > .wr > .el-2 > .content .descr {
+          color: white;
+          font-family: Raleway-Lighter;
+          font-size: 16px;
+          font-weight: 400; }
+    section.event > .wr footer {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px; }
+      section.event > .wr footer > ul.links {
+        list-style: none;
+        display: flex;
+        margin: 35px 0 20px 0;
+        padding: 0; }
+        section.event > .wr footer > ul.links li {
+          margin: 0 15px; }
+          section.event > .wr footer > ul.links li a {
+            color: rgba(255, 255, 255, 0.4);
+            font-family: Raleway-Regular;
+            font-size: 14px;
+            font-weight: 100; }
+            section.event > .wr footer > ul.links li a:hover, section.event > .wr footer > ul.links li a.active {
+              color: white; }
+      section.event > .wr footer > .copy {
+        color: rgba(255, 255, 255, 0.4);
+        font-family: Raleway-Lighter;
+        font-size: 13px;
+        font-weight: 100; }
+        section.event > .wr footer > .copy a {
+          color: inherit; }
+          section.event > .wr footer > .copy a:hover {
+            color: white; }
 
 /*# sourceMappingURL=style.css.map */
