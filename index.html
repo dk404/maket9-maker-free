@@ -12,30 +12,30 @@
 
 <body>
 
-<header style="background-image:url(img/mountains-header.png);">
+<header style="background-image:url(img/mountains-header.png);" data-parallax='{"backgroundPositionY":"50%"}'>
     <div class="wr">
         <div class="row-1">
             <a href="#" class="logo"></a>
             <a href="#" class="menu"></a>
         </div>
-        <div class="row-2">
+        <div class="row-2" data-parallax='{"y":"10%","scale":1.5,"opacity":0}'>
             <h1>we build innovative companies</h1>
         </div>
     </div>
 </header>
-<section class="mission">
+<section class="mission" > <!--data-parallax='{"y":"10%"}'-->
     <div class="wr">
         <div class="el-1">
-            <div class="img">
+            <div class="img" data-parallax='{"x":{"from":"5%","to":0},"duration":"100%"}'>
                 <span style="background-image:url(img/mountains.png);"></span>
             </div>
         </div>
         <div class="el-2">
-            <div class="col-1">
-                <div class="num">01</div>
+            <div class="col-1" data-parallax='{"x":{"from":"-2%","to":0}}'>
+                <div class="num" >01</div>
                 <div class="rotate-text">mission</div>
             </div>
-            <div class="col-2">
+            <div class="col-2" data-parallax='{"y":{"from":"1%","to":0}}'>
                 <p>Is allowance instantly strangers applauded discourse so. Separate entrance welcomed sensible laughing why one moderate shy. We seeing piqued garden he. As in merry at forth least ye stood.</p>
 
                 <p>And cold sons yet with. Delivered middleton therefore me at. Attachment companions man way excellence how her pianoforte.</p>
@@ -43,11 +43,11 @@
         </div>
     </div>
 </section>
-<section class="projects" style="background-image:url(img/projects-background.png);">
+<section class="projects" style="background-image:url(img/projects-background.png);" data-parallax='{"y":"2%"}'>
     <div class="wr">
         <div class="el-1">
-            <div class="letter">R</div>
-            <div class="num" data-css="projects">02</div>
+            <div class="letter" data-parallax='{"x":{"from":"-2%","to":0},"scale":{"from":0.9,"to":1},"duration":"30%"}'>R</div>
+            <div class="num" data-css="projects" data-parallax='{"y":"10%","scale":1.3,"rotate":{"from":30,"to":0,"duration":50}}'>02</div>
         </div>
         <div class="el-2">
             <ul>
@@ -77,12 +77,12 @@
     <div class="wr">
         <div class="el-1">
             <div class="letter">T</div>
-            <div class="num" data-css="team">03</div>
+            <div class="num" data-css="team" data-parallax='{"y":"10%"}'>03</div>
         </div>
         <div class="el-2">
             <ul>
                 <li></li>
-                <li>
+                <li data-parallax='{"y":"5%"}'>
                     <div class="photo" style="background-image:url(img/photo-1.png);">
                         <div class="text">
                             <div class="name">George M. Bryson</div>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li data-parallax='{"x":"5%","y":"4%"}'>
                     <div class="photo"  style="background-image:url(img/photo-2.png);">
                         <div class="text">
                             <div class="name">Kenneth G. Gilmore</div>
@@ -103,7 +103,7 @@
 
                     </div>
                 </li>
-                <li>
+                <li data-parallax='{"x":"-5%","y":"6%"}'>
                     <div class="photo" style="background-image:url(img/photo-3.png);">
                         <div class="text">
                             <div class="name">Kenneth G. Gilmore</div>
@@ -112,7 +112,7 @@
 
                     </div>
                 </li>
-                <li>
+                <li data-parallax='{"x":"2%","y":"2%"}'>
                     <div class="photo" style="background-image:url(img/photo-4.png);">
                         <div class="text">
                             <div class="name">Judith R. Flynn</div>
@@ -121,7 +121,7 @@
 
                     </div>
                 </li>
-                <li>
+                <li data-parallax='{"x":"-3%","y":"4%"}'>
                     <div class="photo" style="background-image:url(img/photo-5.png);">
                         <div class="text">
                             <div class="name">Donald S. Thompson</div>
@@ -137,11 +137,11 @@
 <section class="event" style="background-image:url(img/EVENT.png);">
     <div class="wr">
         <div class="el-1">
-            <div class="letter">E</div>
-            <div class="num" data-css="event">04</div>
+            <div class="letter" data-parallax='{"x":{"from":"-2%","to":0},"y":"2%"}'>E</div>
+            <div class="num" data-css="event" data-parallax='{"y":"4%"}'>04</div>
         </div>
         <div class="el-2">
-            <div class="content">
+            <div class="content" data-parallax='{"x":{"from":"-6%","to":0}}'>
                 <h3>Feel emotions</h3>
                 <div class="descr">
                     <p>One purse as fully me or point. Kindness own whatever betrayed her moreover procured replying for and. Proposal indulged no do do sociable he throwing settling. Covered ten nor comfort offices carried.</p>
@@ -178,6 +178,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/kasparsj/jquery.requestAnimationFrame/master/jquery.requestAnimationFrame.min.js"></script>
 <script src="js/jquery.data-parallax.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<!--<script type="text/javascript" src="js/common.js"></script>-->
 </body>
 </html>

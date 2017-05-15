@@ -116,11 +116,19 @@ section.mission{
       padding: 0 30px;
       box-sizing: border-box;
 
+      @include media($middle_size) {
+        position: relative;
+      }
+
       &>.img{
         position: relative;
         display: block;
         margin: 0 auto;
         max-width: percentage(570px / $maw);
+
+        @include media($middle_size) {
+          max-width: 100%;
+        }
 
         span{
           position: relative;
@@ -137,12 +145,20 @@ section.mission{
       display: flex;
       justify-content: space-between;
 
+      @include media($middle_size) {
+        display: block;
+      }
+
       &>.col-1{
         position: relative;
         width: percentage(223px / $maw);
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include media($middle_size) {
+          width: 100%;
+        }
 
         &>.num{
           color: rgba(white, 0.01);
@@ -166,6 +182,11 @@ section.mission{
       }
       &>.col-2{
         width: percentage(475px / $maw);
+
+        @include media($middle_size) {
+          margin-top: 120px;
+          width: 100%;
+        }
 
         p{
           color: rgba(white, .7);
@@ -206,6 +227,12 @@ section.projects{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+
+    @include media($middle_size) {
+      display:block;
+      padding-top: 150px;
+    }
 
     &>.el-1{
       position: absolute;
@@ -216,13 +243,37 @@ section.projects{
       width:100%;
       padding: 0 30px;
       box-sizing: border-box;
+      top: 0; left: 0;
+
+      @include media($middle_size) {
+        //position: relative;
+        min-height: inherit;
+        flex-direction: column;
+      }
 
       &>.letter{
         @extend %letter;
+        position: relative;
+
+        @include media($middle_size) {
+          //width: 100%;
+          font-size: 360px;
+          line-height: 1;
+          order: 2;
+
+        }
       }
       &>.num{
         @extend %num;
+        position: relative;
         margin-bottom: 20%;
+
+        @include media($middle_size) {
+          //width: 100%;
+          order: 1;
+          color: rgba(white, 0.02);
+          margin-bottom: 0;
+        }
 
       }
 
@@ -239,9 +290,22 @@ section.projects{
         flex-wrap: wrap;
         align-items: center;
 
+        @include media($middle_size) {
+          flex-direction: column;
+          padding: 0;
+          margin-top: 215px;
+        }
+
         li{
           flex-basis: calc(33% - 50px);
           margin-right: 50px;
+
+          @include media($middle_size) {
+            margin-right: 0;
+            margin-bottom: 35px;
+            flex-basis: auto;
+
+          }
 
           img{
             max-width: 100%;
@@ -286,18 +350,33 @@ section.team{
     }
     &>.el-2{
       position: relative;
+      flex-basis: 100%;
 
       &>ul{
+        position: relative;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 0;
+
+        @include media($middle_size) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
 
         li{
           position: relative;
           flex-basis: 45%;
           box-sizing: border-box;
           z-index: 1;
+
+          @include media($middle_size) {
+            flex-basis: 100%;
+            margin-bottom: 70px;
+            padding: 0 !important;
+          }
 
           &:nth-of-type(2){
             flex: 1;
@@ -307,8 +386,17 @@ section.team{
               width: 450px;
               height: 450px;
 
+              @include media($middle_size) {
+                width: 300px;
+                height: auto;
+              }
+
               .text{
                 left: -150px;
+
+                @include media($middle_size) {
+                  left: auto;
+                }
               }
             }
           }
@@ -337,10 +425,23 @@ section.team{
             background: no-repeat center / cover;
             box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
 
+            @include media($middle_size) {
+              background: no-repeat top / contain;
+              height: auto;
+            }
+
             .text{
               position: absolute;
               bottom: 30px;
               width: 330px;
+
+              @include media($middle_size) {
+                position: relative;
+                width: auto;
+                padding: 355px 15px 15px 15px;
+                left: auto !important;
+                right: auto !important;
+              }
 
               &:before{
                 content: '';

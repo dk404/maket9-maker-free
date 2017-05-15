@@ -143,11 +143,17 @@ section.mission {
       width: 100%;
       padding: 0 30px;
       box-sizing: border-box; }
+      @media (max-width: 768px) {
+        section.mission > .wr > .el-1 {
+          position: relative; } }
       section.mission > .wr > .el-1 > .img {
         position: relative;
         display: block;
         margin: 0 auto;
         max-width: 48.71795%; }
+        @media (max-width: 768px) {
+          section.mission > .wr > .el-1 > .img {
+            max-width: 100%; } }
         section.mission > .wr > .el-1 > .img span {
           position: relative;
           display: block;
@@ -159,12 +165,18 @@ section.mission {
       position: relative;
       display: flex;
       justify-content: space-between; }
+      @media (max-width: 768px) {
+        section.mission > .wr > .el-2 {
+          display: block; } }
       section.mission > .wr > .el-2 > .col-1 {
         position: relative;
         width: 19.05983%;
         display: flex;
         align-items: center;
         justify-content: center; }
+        @media (max-width: 768px) {
+          section.mission > .wr > .el-2 > .col-1 {
+            width: 100%; } }
         section.mission > .wr > .el-2 > .col-1 > .num {
           color: rgba(255, 255, 255, 0.01);
           font-family: 'Yantramanav';
@@ -180,6 +192,10 @@ section.mission {
           transform: rotate(-90deg); }
       section.mission > .wr > .el-2 > .col-2 {
         width: 40.59829%; }
+        @media (max-width: 768px) {
+          section.mission > .wr > .el-2 > .col-2 {
+            margin-top: 120px;
+            width: 100%; } }
         section.mission > .wr > .el-2 > .col-2 p {
           color: rgba(255, 255, 255, 0.7);
           font-family: 'Raleway-Light';
@@ -210,7 +226,12 @@ section.projects {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    z-index: 1; }
+    @media (max-width: 768px) {
+      section.projects > .wr {
+        display: block;
+        padding-top: 150px; } }
     section.projects > .wr > .el-1 {
       position: absolute;
       display: flex;
@@ -219,9 +240,28 @@ section.projects {
       align-items: center;
       width: 100%;
       padding: 0 30px;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      top: 0;
+      left: 0; }
+      @media (max-width: 768px) {
+        section.projects > .wr > .el-1 {
+          min-height: inherit;
+          flex-direction: column; } }
+      section.projects > .wr > .el-1 > .letter {
+        position: relative; }
+        @media (max-width: 768px) {
+          section.projects > .wr > .el-1 > .letter {
+            font-size: 360px;
+            line-height: 1;
+            order: 2; } }
       section.projects > .wr > .el-1 > .num {
+        position: relative;
         margin-bottom: 20%; }
+        @media (max-width: 768px) {
+          section.projects > .wr > .el-1 > .num {
+            order: 1;
+            color: rgba(255, 255, 255, 0.02);
+            margin-bottom: 0; } }
     section.projects > .wr > .el-2 {
       position: relative; }
       section.projects > .wr > .el-2 > ul {
@@ -232,9 +272,19 @@ section.projects {
         display: flex;
         flex-wrap: wrap;
         align-items: center; }
+        @media (max-width: 768px) {
+          section.projects > .wr > .el-2 > ul {
+            flex-direction: column;
+            padding: 0;
+            margin-top: 215px; } }
         section.projects > .wr > .el-2 > ul li {
           flex-basis: calc(33% - 50px);
           margin-right: 50px; }
+          @media (max-width: 768px) {
+            section.projects > .wr > .el-2 > ul li {
+              margin-right: 0;
+              margin-bottom: 35px;
+              flex-basis: auto; } }
           section.projects > .wr > .el-2 > ul li img {
             max-width: 100%; }
 
@@ -262,25 +312,45 @@ section.team {
       section.team > .wr > .el-1 > .num {
         position: absolute; }
     section.team > .wr > .el-2 {
-      position: relative; }
+      position: relative;
+      flex-basis: 100%; }
       section.team > .wr > .el-2 > ul {
+        position: relative;
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between; }
+        justify-content: space-between;
+        padding: 0; }
+        @media (max-width: 768px) {
+          section.team > .wr > .el-2 > ul {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; } }
         section.team > .wr > .el-2 > ul li {
           position: relative;
           flex-basis: 45%;
           box-sizing: border-box;
           z-index: 1; }
+          @media (max-width: 768px) {
+            section.team > .wr > .el-2 > ul li {
+              flex-basis: 100%;
+              margin-bottom: 70px;
+              padding: 0 !important; } }
           section.team > .wr > .el-2 > ul li:nth-of-type(2) {
             flex: 1;
             margin-bottom: 70px; }
             section.team > .wr > .el-2 > ul li:nth-of-type(2) .photo {
               width: 450px;
               height: 450px; }
+              @media (max-width: 768px) {
+                section.team > .wr > .el-2 > ul li:nth-of-type(2) .photo {
+                  width: 300px;
+                  height: auto; } }
               section.team > .wr > .el-2 > ul li:nth-of-type(2) .photo .text {
                 left: -150px; }
+                @media (max-width: 768px) {
+                  section.team > .wr > .el-2 > ul li:nth-of-type(2) .photo .text {
+                    left: auto; } }
           section.team > .wr > .el-2 > ul li:nth-of-type(3) .text {
             left: 80%; }
           section.team > .wr > .el-2 > ul li:nth-of-type(4) {
@@ -301,10 +371,21 @@ section.team {
             height: 300px;
             background: no-repeat center / cover;
             box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45); }
+            @media (max-width: 768px) {
+              section.team > .wr > .el-2 > ul li .photo {
+                background: no-repeat top / contain;
+                height: auto; } }
             section.team > .wr > .el-2 > ul li .photo .text {
               position: absolute;
               bottom: 30px;
               width: 330px; }
+              @media (max-width: 768px) {
+                section.team > .wr > .el-2 > ul li .photo .text {
+                  position: relative;
+                  width: auto;
+                  padding: 355px 15px 15px 15px;
+                  left: auto !important;
+                  right: auto !important; } }
               section.team > .wr > .el-2 > ul li .photo .text:before {
                 content: '';
                 display: block;

@@ -68,3 +68,10 @@ $middle_size: 768px;
   line-height: 0;
 
 }
+
+@mixin media($size)
+{
+  @media (max-width: $size) {
+    @content;
+  }
+}
