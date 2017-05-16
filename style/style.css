@@ -291,7 +291,8 @@ section.projects {
 section.team {
   position: relative;
   min-height: 100vh;
-  margin-top: 80px; }
+  margin-top: 80px;
+  padding-bottom: 200px; }
   section.team > .wr {
     min-height: inherit;
     display: flex;
@@ -437,6 +438,9 @@ section.event {
         position: absolute;
         line-height: 1;
         right: 150px; }
+        @media (max-width: 768px) {
+          section.event > .wr > .el-1 > .letter {
+            right: 0; } }
       section.event > .wr > .el-1 > .num {
         align-self: center;
         font-size: 190px;
@@ -489,5 +493,9 @@ section.event {
           color: inherit; }
           section.event > .wr footer > .copy a:hover {
             color: white; }
+
+section {
+  width: 100%;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=style.css.map */

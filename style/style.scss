@@ -319,6 +319,7 @@ section.team{
   position: relative;
   min-height: 100vh;
   margin-top: 80px;
+  padding-bottom: 200px;
 
   &>.wr{
     min-height: inherit;
@@ -514,6 +515,11 @@ section.event{
         position: absolute;
         line-height: 1;
         right: 150px;
+
+        @include media($middle_size) {
+          right: 0;
+
+        }
       }
       &>.num{
         @extend %num;
@@ -597,6 +603,12 @@ section.event{
     }
   }
   
+}
+
+section{
+  width: 100%;
+  overflow-x: hidden;
+
 }
 
 
