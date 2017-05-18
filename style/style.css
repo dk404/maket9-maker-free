@@ -432,7 +432,12 @@ section.event {
       flex-direction: column;
       width: 100%;
       padding: 100px 30px 0 0;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      left: 0; }
+      @media (max-width: 768px) {
+        section.event > .wr > .el-1 {
+          display: block;
+          position: relative; } }
       section.event > .wr > .el-1 > .letter {
         align-self: flex-end;
         position: absolute;
