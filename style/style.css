@@ -160,7 +160,11 @@ section.mission {
           padding-top: 100%;
           background: no-repeat center / cover;
           box-shadow: 0 48px 84px 17px #111428;
-          will-change: all; }
+          will-change: all;
+          transition: all 0.3s ease; }
+          section.mission > .wr > .el-1 > .img span:hover {
+            box-shadow: 0 25px 59px rgba(0, 0, 0, 0.45);
+            transform: scale(0.9); }
     section.mission > .wr > .el-2 {
       position: relative;
       display: flex;
@@ -371,7 +375,11 @@ section.team {
             width: 300px;
             height: 300px;
             background: no-repeat center / cover;
-            box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45); }
+            box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+            transition: all 0.3s ease; }
+            section.team > .wr > .el-2 > ul li .photo:hover {
+              box-shadow: 0 25px 59px rgba(0, 0, 0, 0.45);
+              transform: scale(0.9); }
             @media (max-width: 768px) {
               section.team > .wr > .el-2 > ul li .photo {
                 background: no-repeat top / contain;
