@@ -1,0 +1,72 @@
+/*-----------------------------------
+fonts
+  http://nomail.com.ua/font/raleway
+  https://fonts.google.com/?query=Yantramanav&selection.family=Yantramanav:900
+-----------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Yantramanav:900");
+@font-face {
+  font-family: 'Raleway-Black';
+  src: local("Raleway-Black"), url("https://nomail.com.ua/files/woff/d641109f46a9231b7a92d6a114302a2b.woff") format("woff"); }
+@font-face {
+  font-family: 'Raleway-Lighter';
+  src: local("Raleway-ExtraLight"), url("https://nomail.com.ua/files/woff/ebd5c800e24e108dd3aeacb28e16c595.woff") format("woff"); }
+@font-face {
+  font-family: 'Raleway-Light';
+  src: local("Raleway-Light"), url("https://nomail.com.ua/files/woff/6b562d7ca359ccb3259f570bcceb4f70.woff") format("woff"); }
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: local("Raleway-Regular"), url("https://nomail.com.ua/files/woff/2d4cd8722065da2ac700199273325752.woff") format("woff"); }
+/*-----------------------------------
+colors
+-----------------------------------*/
+/*-----------------------------------
+vars
+-----------------------------------*/
+.wr {
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+  min-height: inherit; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  height: 100%;
+  min-height: 100%;
+  color: white;
+  background: #191e3f; }
+
+header {
+  position: relative;
+  min-height: 100vh;
+  background: no-repeat center / cover; }
+  header > .wr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    header > .wr > .row-1 {
+      text-align: center;
+      flex-basis: 100%;
+      padding: 84px 0 0 0; }
+      header > .wr > .row-1 > .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        top: 117px;
+        width: 47px;
+        height: 17px; }
+        header > .wr > .row-1 > .menu:before, header > .wr > .row-1 > .menu:after {
+          content: '';
+          display: block;
+          height: 4px;
+          background: white; }
+    header > .wr > .row-2 h1 {
+      font-family: Raleway-Lighter;
+      font-size: 60px;
+      font-weight: lighter;
+      color: rgba(255, 255, 255, 0.6); }
+
+/*# sourceMappingURL=style.css.map */
