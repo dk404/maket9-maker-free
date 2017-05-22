@@ -195,7 +195,8 @@ header {
             left: auto;
             position: relative;
             margin-top: 10px;
-            width: auto; } }
+            width: auto;
+            padding: 15px; } }
 
 .projects {
   position: relative;
@@ -234,6 +235,12 @@ header {
       width: 100%; }
       @media (max-width: 768px) {
         .projects > .wr > .el-1 {
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
           position: relative;
           margin: 150px 0; } }
       .projects > .wr > .el-1 > .letter {
@@ -254,7 +261,11 @@ header {
           .projects > .wr > .el-1 > .num {
             -webkit-order: 1;
                 -ms-flex-order: 1;
-                    order: 1; } }
+                    order: 1;
+            -webkit-align-self: center;
+                -ms-flex-item-align: center;
+                        -ms-grid-row-align: center;
+                    align-self: center; } }
     .projects > .wr > .el-2 {
       position: relative;
       display: -webkit-flex;
@@ -263,15 +274,16 @@ header {
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
-      max-width: 900px; }
+      max-width: 900px;
+      width: 100%; }
       @media (max-width: 768px) {
         .projects > .wr > .el-2 {
           -webkit-flex-direction: column;
               -ms-flex-direction: column;
                   flex-direction: column;
-          -webkit-align-items: flex-start;
-              -ms-flex-align: start;
-                  align-items: flex-start; } }
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
       .projects > .wr > .el-2 a {
         display: block;
         margin-right: 50px;
@@ -307,7 +319,11 @@ header {
       left: 0; }
       @media (max-width: 768px) {
         .team > .wr > .el-1 > .num {
-          position: relative; } }
+          position: relative;
+          -webkit-align-self: center;
+              -ms-flex-item-align: center;
+                      -ms-grid-row-align: center;
+                  align-self: center; } }
     .team > .wr > .el-1 > .letter {
       font-size: 900px;
       text-shadow: 0 58px 165px rgba(0, 0, 0, 0.45); }
@@ -333,18 +349,7 @@ header {
               justify-content: space-between; }
       @media (max-width: 768px) {
         .team > .wr > .el-2 ul {
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-direction: column;
-              -ms-flex-direction: column;
-                  flex-direction: column;
-          -webkit-align-items: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-justify-content: center !important;
-              -ms-flex-pack: center !important;
-                  justify-content: center !important;
+          display: block;
           margin-top: -100px; } }
       .team > .wr > .el-2 ul li {
         -webkit-flex-basis: 50%;
@@ -360,7 +365,10 @@ header {
         @media (max-width: 768px) {
           .team > .wr > .el-2 ul li {
             padding: 0 !important;
-            margin-bottom: 80px; } }
+            margin-bottom: 80px;
+            -webkit-justify-content: center !important;
+                -ms-flex-pack: center !important;
+                    justify-content: center !important; } }
         .team > .wr > .el-2 ul li > .photo {
           max-width: 470px;
           position: relative;

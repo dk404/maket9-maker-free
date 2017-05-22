@@ -146,6 +146,7 @@ header{
           position: relative;
           margin-top: 10px;
           width: auto;
+          padding: 15px;
         }
 
         color: rgba(white, .7);
@@ -170,12 +171,10 @@ header{
     height: 20vh;
     width: 100%;
   }
-
   &:before{
     background: linear-gradient(to bottom, $bg, transparent);
     top: 0;
   }
-
   &:after{
     background: linear-gradient(to top, $bg, transparent);
     bottom: 0;
@@ -194,6 +193,8 @@ header{
 
       @include media($medium)
       {
+        flex-direction: column;
+        align-items: center;
         position: relative;
         margin: 150px 0;
       }
@@ -222,6 +223,7 @@ header{
         @include media($medium)
         {
           order: 1;
+          align-self: center;
         }
 
       }
@@ -231,11 +233,12 @@ header{
       display: flex;
       flex-wrap: wrap;
       max-width: 900px;
+      width: 100%;
 
       @include media($medium)
       {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
 
       a{
@@ -277,6 +280,7 @@ header{
         @include media($medium)
         {
           position: relative;
+          align-self: center;
         }
       }
       &>.letter{
@@ -308,10 +312,7 @@ header{
 
         @include media($medium)
         {
-          display:flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center !important;
+          display:block;
           margin-top: -100px;
         }
 
@@ -325,6 +326,7 @@ header{
           {
             padding: 0 !important;
             margin-bottom: 80px;
+            justify-content: center !important;
           }
 
 
