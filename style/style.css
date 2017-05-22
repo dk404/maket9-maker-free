@@ -28,6 +28,32 @@ vars
   margin: 0 auto;
   min-height: inherit; }
 
+.mission > .wr > .el-1 > .num, .projects > .wr > .el-1 > .num, .team > .wr > .el-1 > .num, .event > .wr > .el-1 .num {
+  display: flex;
+  position: relative;
+  color: rgba(255, 255, 255, 0.02);
+  font-family: Yantramanav;
+  font-size: 286px;
+  font-weight: 900;
+  line-height: 0;
+  justify-content: center; }
+  .mission > .wr > .el-1 > .num:before, .projects > .wr > .el-1 > .num:before, .team > .wr > .el-1 > .num:before, .event > .wr > .el-1 .num:before {
+    content: attr(data-css);
+    position: absolute;
+    transform: rotate(-90deg);
+    color: white;
+    font-family: Raleway-Lighter;
+    font-size: 24px;
+    font-weight: 100; }
+
+.projects > .wr > .el-1 > .letter, .team > .wr > .el-1 > .letter, .event > .wr > .el-1 .letter {
+  text-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+  color: rgba(25, 30, 63, 0.61);
+  font-family: Raleway-Black;
+  font-size: 600px;
+  font-weight: 900;
+  line-height: 0; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -37,10 +63,22 @@ html, body {
   color: white;
   background: #191e3f; }
 
+section {
+  position: relative;
+  min-height: 100vh; }
+
 header {
   position: relative;
   min-height: 100vh;
   background: no-repeat center / cover; }
+  header:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 20vh;
+    bottom: 0;
+    background: linear-gradient(to top, #191e3f, transparent); }
   header > .wr {
     display: flex;
     flex-wrap: wrap;
@@ -68,5 +106,239 @@ header {
       font-size: 60px;
       font-weight: lighter;
       color: rgba(255, 255, 255, 0.6); }
+
+.mission {
+  padding: 100px 0 200px 0;
+  box-sizing: border-box; }
+  .mission > .wr {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .mission > .wr > .el-1 {
+      position: absolute;
+      left: 0; }
+    .mission > .wr > .el-2 {
+      position: relative;
+      max-width: 660px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45); }
+      .mission > .wr > .el-2 img {
+        max-width: 100%; }
+      .mission > .wr > .el-2 .text {
+        position: absolute;
+        width: 360px;
+        left: 68%;
+        color: rgba(255, 255, 255, 0.7);
+        font-family: Raleway-Lighter;
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 100; }
+
+.projects {
+  position: relative;
+  padding: 100px 0;
+  box-sizing: border-box;
+  background: no-repeat center / cover; }
+  .projects:before, .projects:after {
+    content: '';
+    position: absolute;
+    height: 20vh;
+    width: 100%; }
+  .projects:before {
+    background: linear-gradient(to bottom, #191e3f, transparent);
+    top: 0; }
+  .projects:after {
+    background: linear-gradient(to top, #191e3f, transparent);
+    bottom: 0; }
+  .projects > .wr {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
+    .projects > .wr > .el-1 {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      .projects > .wr > .el-1 > .letter {
+        line-height: .3; }
+      .projects > .wr > .el-1 > .num {
+        align-self: flex-start; }
+    .projects > .wr > .el-2 {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px; }
+      .projects > .wr > .el-2 a {
+        display: block;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        width: calc(33% - 50px); }
+
+.team {
+  padding: 200px 0 300px 0; }
+  .team > .wr > .el-1 {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; }
+    .team > .wr > .el-1 > .num {
+      position: absolute;
+      align-self: flex-start;
+      left: 0; }
+    .team > .wr > .el-1 > .letter {
+      font-size: 900px;
+      text-shadow: 0 58px 165px rgba(0, 0, 0, 0.45); }
+  .team > .wr > .el-2 {
+    position: relative; }
+    .team > .wr > .el-2 ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .team > .wr > .el-2 ul li {
+        flex-basis: 50%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start; }
+        .team > .wr > .el-2 ul li > .photo {
+          max-width: 470px;
+          position: relative;
+          box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+          transition: all 0.3s ease; }
+          .team > .wr > .el-2 ul li > .photo:hover {
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.45);
+            transform: scale(0.9); }
+          .team > .wr > .el-2 ul li > .photo img {
+            max-width: 100%;
+            margin-bottom: -5px; }
+          .team > .wr > .el-2 ul li > .photo .info {
+            position: absolute;
+            bottom: 50px;
+            width: 300px; }
+            .team > .wr > .el-2 ul li > .photo .info:before {
+              content: '';
+              display: block;
+              width: 56px;
+              height: 4px;
+              background-color: white;
+              margin-bottom: 20px; }
+            .team > .wr > .el-2 ul li > .photo .info > .name {
+              font-family: Raleway-Light;
+              font-size: 32px;
+              font-weight: 100;
+              margin-bottom: 15px;
+              white-space: nowrap; }
+            .team > .wr > .el-2 ul li > .photo .info > .spec {
+              color: rgba(255, 255, 255, 0.5);
+              font-family: Raleway-Light;
+              font-size: 17px;
+              font-weight: 100; }
+            .team > .wr > .el-2 ul li > .photo .info > .text {
+              color: rgba(255, 255, 255, 0.5);
+              font-family: Raleway-Light;
+              font-size: 15px;
+              font-weight: 100;
+              max-width: 300px; }
+        .team > .wr > .el-2 ul li:nth-of-type(2) {
+          padding: 0 100px 150px 0; }
+          .team > .wr > .el-2 ul li:nth-of-type(2) .info {
+            left: -160px; }
+        .team > .wr > .el-2 ul li:nth-of-type(3) {
+          padding: 0 0 160px 0; }
+          .team > .wr > .el-2 ul li:nth-of-type(3) .info {
+            left: 86%; }
+        .team > .wr > .el-2 ul li:nth-of-type(4) {
+          justify-content: flex-end;
+          padding-top: 127px; }
+          .team > .wr > .el-2 ul li:nth-of-type(4) .info {
+            left: -100px; }
+        .team > .wr > .el-2 ul li:nth-of-type(5) {
+          padding-left: 112px; }
+          .team > .wr > .el-2 ul li:nth-of-type(5) .info {
+            left: -100px; }
+        .team > .wr > .el-2 ul li:nth-of-type(6) {
+          padding: 210px 0 0 100px; }
+          .team > .wr > .el-2 ul li:nth-of-type(6) .info {
+            left: 55%; }
+
+.event {
+  position: relative; }
+  .event:before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 20vh;
+    background: linear-gradient(to bottom, #191e3f, transparent);
+    top: 0; }
+  .event > .wr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+    .event > .wr > .el-1 {
+      position: absolute;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .event > .wr > .el-1 .num {
+        font-size: 200px;
+        bottom: -140px;
+        left: 60px;
+        z-index: 1; }
+      .event > .wr > .el-1 .letter {
+        position: absolute;
+        font-size: 800px;
+        line-height: 0.7;
+        right: 100px; }
+    .event > .wr > .el-2 {
+      min-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      max-width: 486px; }
+      .event > .wr > .el-2 h2 {
+        font-family: Raleway-Light;
+        font-size: 52px;
+        font-weight: 100;
+        line-height: 83px;
+        margin: 0; }
+      .event > .wr > .el-2 .text {
+        color: rgba(255, 255, 255, 0.6);
+        font-family: Raleway-Light;
+        font-size: 19px;
+        font-weight: 100;
+        line-height: 1.5; }
+    .event > .wr footer {
+      width: 100%;
+      align-self: flex-end;
+      padding-bottom: 70px;
+      text-align: center; }
+      .event > .wr footer .links {
+        margin: 30px 0 15px 0; }
+        .event > .wr footer .links a {
+          display: inline-block;
+          font-family: Raleway-Light;
+          font-size: 15px;
+          font-weight: 100;
+          line-height: 36px;
+          margin: 0 4px;
+          color: rgba(255, 255, 255, 0.4); }
+      .event > .wr footer .copy {
+        font-family: Raleway-Light;
+        font-size: 15px;
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.4); }
+        .event > .wr footer .copy a {
+          color: silver; }
+          .event > .wr footer .copy a:hover {
+            color: #d25a5e; }
 
 /*# sourceMappingURL=style.css.map */

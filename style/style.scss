@@ -11,10 +11,24 @@ html,body{
   background: $bg;
 }
 
+section{
+  position: relative;
+  min-height: 100vh;
+}
 header{
   position: relative;
   min-height: 100vh;
   background: no-repeat center / cover;
+
+  &:before{
+    content: '';
+    position: absolute;
+    display:block;
+    width: 100%;
+    height: 20vh;
+    bottom: 0;
+    background: linear-gradient(to top, $bg, transparent);
+  }
 
   &>.wr{
     display: flex;
@@ -63,3 +77,358 @@ header{
 
   }
 }
+.mission{
+  padding: 100px 0 200px 0;
+  box-sizing: border-box;
+
+  &>.wr{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &>.el-1{
+      position: absolute;
+      left: 0;
+
+      &>.num{
+        @extend %num;
+      }
+
+    }
+    &>.el-2{
+      position: relative;
+      max-width: 660px;
+      display: flex;
+      align-items: center;
+      //background-color: #191e3f;
+      box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+
+      img{
+        max-width: 100%;
+      }
+      .text{
+        position: absolute;
+        width: 360px;
+        left: 68%;
+
+        color: rgba(white, .7);
+        font-family: Raleway-Lighter;
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 100;
+      }
+
+    }
+  }
+}
+.projects{
+  position: relative;
+  padding: 100px 0;
+  box-sizing: border-box;
+  background: no-repeat center / cover;
+
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    height: 20vh;
+    width: 100%;
+  }
+
+  &:before{
+    background: linear-gradient(to bottom, $bg, transparent);
+    top: 0;
+  }
+
+  &:after{
+    background: linear-gradient(to top, $bg, transparent);
+    bottom: 0;
+  }
+
+  &>.wr{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &>.el-1{
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+
+      &>.letter{
+        @extend %letter;
+        line-height: .3;
+      }
+      &>.num{
+        @extend %num;
+        align-self: flex-start;
+      }
+    }
+    &>.el-2{
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+
+      a{
+        display:block;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        width: calc(33% - 50px);
+      }
+    }
+
+  }
+}
+.team{
+  padding: 200px 0 300px 0;
+
+  &>.wr{
+
+
+    &>.el-1{
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      &>.num{
+        @extend %num;
+        position: absolute;
+        align-self: flex-start;
+        left: 0;
+      }
+      &>.letter{
+        @extend %letter;
+        font-size: 900px;
+
+        text-shadow: 0 58px 165px rgba(0, 0, 0, 0.45);
+
+      }
+
+    }
+    &>.el-2{
+      position: relative;
+
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li{
+          flex-basis: 50%;
+          box-sizing: border-box;
+          display: flex;
+          align-items: flex-start;
+
+          &>.photo{
+            max-width: 470px;
+            position: relative;
+            box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
+            transition: all 0.3s ease;
+
+            &:hover{
+              box-shadow: 0 30px 50px rgba(0, 0, 0, 0.45);
+              transform: scale(0.9);
+            }
+
+            img{
+              max-width: 100%;
+              margin-bottom: -5px;
+            }
+            .info{
+              position: absolute;
+              bottom: 50px;
+              width: 300px;
+
+              &:before{
+                content: '';
+                display:block;
+                width: 56px;
+                height: 4px;
+                background-color: white;
+                margin-bottom: 20px;
+              }
+              &>.name{
+                font-family: Raleway-Light;
+                font-size: 32px;
+                font-weight: 100;
+                margin-bottom: 15px;
+                white-space: nowrap;
+              }
+              &>.spec{
+
+                color: rgba(white, .5);
+                font-family: Raleway-Light;
+                font-size: 17px;
+                font-weight: 100;
+              }
+              &>.text{
+                color: rgba(white, 0.5);
+                font-family: Raleway-Light;
+                font-size: 15px;
+                font-weight: 100;
+                max-width: 300px;
+              }
+            }
+
+          }
+
+          &:nth-of-type(2){
+            padding: 0 100px 150px 0;
+
+            .info{
+              left: -160px;
+            }
+          }
+          &:nth-of-type(3){
+            padding: 0 0 160px 0;
+
+            .info{
+              left: 86%;
+            }
+          }
+          &:nth-of-type(4){
+            justify-content: flex-end;
+            padding-top: 127px;
+
+            .info{
+              left: -100px;
+            }
+          }
+          &:nth-of-type(5){
+            padding-left: 112px;
+
+            .info{
+              left: -100px;
+            }
+
+          }
+          &:nth-of-type(6){
+            padding: 210px 0 0 100px;
+
+            .info{
+              left: 55%;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
+.event{
+  position: relative;
+  
+  &:before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 20vh;
+    background: linear-gradient(to bottom, $bg, transparent);
+    top: 0;
+  }
+
+  &>.wr{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    //justify-content: center;
+
+    &>.el-1{
+      position: absolute;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .num{
+        @extend %num;
+        font-size: 200px;
+        bottom: -140px;
+        left: 60px;
+        z-index: 1;
+
+      }
+      .letter{
+        @extend %letter;
+        position: absolute;
+        font-size: 800px;
+        line-height: 0.7;
+        right: 100px;
+      }
+
+    }
+
+    &>.el-2{
+      min-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      max-width: 486px;
+
+      h2{
+        font-family: Raleway-Light;
+        font-size: 52px;
+        font-weight: 100;
+        line-height: 83px;
+        margin: 0;
+      }
+      .text{
+        color: rgba(white, 0.6);
+        font-family: Raleway-Light;
+        font-size: 19px;
+        font-weight: 100;
+        line-height: 1.5;
+      }
+    }
+
+
+    footer{
+      width: 100%;
+      align-self: flex-end;
+      padding-bottom: 70px;
+      text-align: center;
+
+      .links{
+        margin: 30px 0 15px 0;
+
+        a{
+          display: inline-block;
+          font-family: Raleway-Light;
+          font-size: 15px;
+          font-weight: 100;
+          line-height: 36px;
+          margin: 0 4px;
+          color: rgba(white, 0.4);
+        }
+      }
+      .copy{
+        font-family: Raleway-Light;
+        font-size: 15px;
+        font-weight: 100;
+        color: rgba(white, 0.4);
+
+        a{
+          color: silver;
+          
+          &:hover{
+            color: $red;
+          }
+        }
+      }
+
+    }
+  }
+}
+
