@@ -289,6 +289,10 @@ header {
         margin-right: 50px;
         margin-bottom: 50px;
         width: calc(33% - 50px); }
+        @media (max-width: 768px) {
+          .projects > .wr > .el-2 a {
+            width: auto;
+            margin-right: 0; } }
 
 .team {
   padding: 200px 0 300px 0; }

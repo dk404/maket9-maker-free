@@ -246,6 +246,12 @@ header{
         margin-right: 50px;
         margin-bottom: 50px;
         width: calc(33% - 50px);
+
+        @include media($medium)
+        {
+          width: auto;
+          margin-right: 0;
+        }
       }
     }
 
