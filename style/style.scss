@@ -308,7 +308,10 @@ header{
 
         @include media($medium)
         {
-          display:block;
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center !important;
           margin-top: -100px;
         }
 
@@ -469,12 +472,12 @@ header{
 
     &>.el-1{
       position: absolute;
-      min-height: 100vh;
+      height: 100%;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
 
 
       @include media($medium)
@@ -487,7 +490,7 @@ header{
       .num{
         @extend %num;
         font-size: 200px;
-        bottom: -140px;
+        bottom: 240px;
         left: 60px;
         z-index: 1;
 
@@ -506,6 +509,8 @@ header{
         font-size: 800px;
         line-height: 0.7;
         right: 100px;
+        margin-top: -100px;
+
 
         @include media($medium)
         {
