@@ -19,13 +19,23 @@ $red: #d25a5e;
 /*-----------------------------------
 vars
 -----------------------------------*/
+$medium: 768px;
+@mixin media($size){
+  @media (max-width: $size ) {
+    @content;
+  }
+}
+
 .wr{
   position: relative;
   max-width: 1170px;
   margin: 0 auto;
   min-height: inherit;
-}
 
+  @include media($medium){
+    padding: 0 30px;
+  }
+}
 %num{
   display: flex;
   position: relative;
@@ -55,3 +65,4 @@ vars
   font-weight: 900;
   line-height: 0;
 }
+

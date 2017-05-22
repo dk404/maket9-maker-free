@@ -35,15 +35,20 @@ header{
     flex-wrap:wrap;
     justify-content: center;
 
+
+
     &>.row-1{
       text-align: center;
       flex-basis: 100%;
       padding: 84px 0 0 0;
 
+      @include media($medium){
+        text-align: left;
+      }
+
       &>.logo{
 
       }
-
       &>.menu{
         display:flex;
         flex-direction: column;
@@ -53,6 +58,10 @@ header{
         top: 117px;
         width: 47px;
         height: 17px;
+
+        @include media($medium){
+          right: 30px;
+        }
 
         &:before, &:after{
           content: '';
@@ -65,12 +74,18 @@ header{
 
     }
     &>.row-2{
+      text-align: center;
+
       h1{
         font-family: Raleway-Lighter;
         font-size: 60px;
         font-weight: lighter;
         color: rgba(white, .6);
         //line-height: 88px;
+
+        @include media($medium){
+          font-size: 40px;
+        }
       }
     }
 
@@ -91,6 +106,12 @@ header{
       position: absolute;
       left: 0;
 
+      @include media($medium)
+      {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
       &>.num{
         @extend %num;
       }
@@ -104,6 +125,13 @@ header{
       //background-color: #191e3f;
       box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
 
+      @include media($medium)
+      {
+        display:block;
+        margin-top: 100px;
+        box-shadow: 0 50px 152px rgba(0, 0, 0, 0.45);
+      }
+
       img{
         max-width: 100%;
       }
@@ -111,6 +139,14 @@ header{
         position: absolute;
         width: 360px;
         left: 68%;
+
+        @include media($medium)
+        {
+          left: auto;
+          position: relative;
+          margin-top: 10px;
+          width: auto;
+        }
 
         color: rgba(white, .7);
         font-family: Raleway-Lighter;
@@ -156,14 +192,38 @@ header{
       justify-content: space-between;
       width: 100%;
 
+      @include media($medium)
+      {
+        position: relative;
+        margin: 150px 0;
+      }
+
 
       &>.letter{
         @extend %letter;
         line-height: .3;
+
+
+
+        @include media($medium)
+        {
+          order: 2;
+          font-size: 400px;
+          margin-top: 300px;
+          position: absolute;
+        }
+
       }
       &>.num{
         @extend %num;
         align-self: flex-start;
+
+
+        @include media($medium)
+        {
+          order: 1;
+        }
+
       }
     }
     &>.el-2{
@@ -171,6 +231,12 @@ header{
       display: flex;
       flex-wrap: wrap;
       max-width: 900px;
+
+      @include media($medium)
+      {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
       a{
         display:block;
@@ -196,17 +262,35 @@ header{
       justify-content: center;
       width: 100%;
 
+      @include media($medium)
+      {
+        position: relative;
+        flex-direction: column;
+      }
+
       &>.num{
         @extend %num;
         position: absolute;
         align-self: flex-start;
         left: 0;
+
+        @include media($medium)
+        {
+          position: relative;
+        }
       }
       &>.letter{
         @extend %letter;
         font-size: 900px;
 
         text-shadow: 0 58px 165px rgba(0, 0, 0, 0.45);
+
+        @include media($medium)
+        {
+          font-size: 400px;
+          line-height: 1;
+          margin-top: 100px;
+        }
 
       }
 
@@ -222,17 +306,37 @@ header{
         flex-wrap: wrap;
         justify-content: space-between;
 
+        @include media($medium)
+        {
+          display:block;
+          margin-top: -100px;
+        }
+
         li{
           flex-basis: 50%;
           box-sizing: border-box;
           display: flex;
           align-items: flex-start;
 
+          @include media($medium)
+          {
+            padding: 0 !important;
+            margin-bottom: 80px;
+          }
+
+
           &>.photo{
             max-width: 470px;
             position: relative;
             box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
             transition: all 0.3s ease;
+
+
+            @include media($medium)
+            {
+              width: 320px;
+              box-shadow: 0 50px 50px rgba(0, 0, 0, 0.45);
+            }
 
             &:hover{
               box-shadow: 0 30px 50px rgba(0, 0, 0, 0.45);
@@ -242,11 +346,24 @@ header{
             img{
               max-width: 100%;
               margin-bottom: -5px;
+
             }
             .info{
               position: absolute;
               bottom: 50px;
               width: 300px;
+
+
+              @include media($medium)
+              {
+                position: relative;
+                bottom: auto !important;
+                left: auto !important;
+                padding: 15px;
+                width: auto;
+
+              }
+
 
               &:before{
                 content: '';
@@ -262,6 +379,11 @@ header{
                 font-weight: 100;
                 margin-bottom: 15px;
                 white-space: nowrap;
+
+                @include media($medium)
+                {
+                  white-space: normal;
+                }
               }
               &>.spec{
 
@@ -350,6 +472,15 @@ header{
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      align-items: flex-start;
+
+
+      @include media($medium)
+      {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+      }
 
       .num{
         @extend %num;
@@ -358,6 +489,14 @@ header{
         left: 60px;
         z-index: 1;
 
+        @include media($medium)
+        {
+          bottom: auto;
+          left: auto;
+          z-index: auto;
+
+        }
+
       }
       .letter{
         @extend %letter;
@@ -365,6 +504,16 @@ header{
         font-size: 800px;
         line-height: 0.7;
         right: 100px;
+
+        @include media($medium)
+        {
+          position: relative;
+          font-size: 500px;
+          right: auto;
+          line-height: 1;
+          margin-top: 50px;
+          text-shadow: 0 50px 150px rgba(black, 0.45);
+        }
       }
 
     }
@@ -395,6 +544,7 @@ header{
 
 
     footer{
+      position: relative;
       width: 100%;
       align-self: flex-end;
       padding-bottom: 70px;
@@ -411,6 +561,10 @@ header{
           line-height: 36px;
           margin: 0 4px;
           color: rgba(white, 0.4);
+          
+          &:hover{
+            color: white;
+          }
         }
       }
       .copy{

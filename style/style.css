@@ -27,6 +27,9 @@ vars
   max-width: 1170px;
   margin: 0 auto;
   min-height: inherit; }
+  @media (max-width: 768px) {
+    .wr {
+      padding: 0 30px; } }
 
 .mission > .wr > .el-1 > .num, .projects > .wr > .el-1 > .num, .team > .wr > .el-1 > .num, .event > .wr > .el-1 .num {
   display: flex;
@@ -87,6 +90,9 @@ header {
       text-align: center;
       flex-basis: 100%;
       padding: 84px 0 0 0; }
+      @media (max-width: 768px) {
+        header > .wr > .row-1 {
+          text-align: left; } }
       header > .wr > .row-1 > .menu {
         display: flex;
         flex-direction: column;
@@ -96,16 +102,24 @@ header {
         top: 117px;
         width: 47px;
         height: 17px; }
+        @media (max-width: 768px) {
+          header > .wr > .row-1 > .menu {
+            right: 30px; } }
         header > .wr > .row-1 > .menu:before, header > .wr > .row-1 > .menu:after {
           content: '';
           display: block;
           height: 4px;
           background: white; }
-    header > .wr > .row-2 h1 {
-      font-family: Raleway-Lighter;
-      font-size: 60px;
-      font-weight: lighter;
-      color: rgba(255, 255, 255, 0.6); }
+    header > .wr > .row-2 {
+      text-align: center; }
+      header > .wr > .row-2 h1 {
+        font-family: Raleway-Lighter;
+        font-size: 60px;
+        font-weight: lighter;
+        color: rgba(255, 255, 255, 0.6); }
+        @media (max-width: 768px) {
+          header > .wr > .row-2 h1 {
+            font-size: 40px; } }
 
 .mission {
   padding: 100px 0 200px 0;
@@ -118,12 +132,21 @@ header {
     .mission > .wr > .el-1 {
       position: absolute;
       left: 0; }
+      @media (max-width: 768px) {
+        .mission > .wr > .el-1 {
+          position: relative;
+          margin-bottom: 50px; } }
     .mission > .wr > .el-2 {
       position: relative;
       max-width: 660px;
       display: flex;
       align-items: center;
       box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45); }
+      @media (max-width: 768px) {
+        .mission > .wr > .el-2 {
+          display: block;
+          margin-top: 100px;
+          box-shadow: 0 50px 152px rgba(0, 0, 0, 0.45); } }
       .mission > .wr > .el-2 img {
         max-width: 100%; }
       .mission > .wr > .el-2 .text {
@@ -135,6 +158,12 @@ header {
         font-size: 18px;
         line-height: 1.5;
         font-weight: 100; }
+        @media (max-width: 768px) {
+          .mission > .wr > .el-2 .text {
+            left: auto;
+            position: relative;
+            margin-top: 10px;
+            width: auto; } }
 
 .projects {
   position: relative;
@@ -161,15 +190,32 @@ header {
       display: flex;
       justify-content: space-between;
       width: 100%; }
+      @media (max-width: 768px) {
+        .projects > .wr > .el-1 {
+          position: relative;
+          margin: 150px 0; } }
       .projects > .wr > .el-1 > .letter {
         line-height: .3; }
+        @media (max-width: 768px) {
+          .projects > .wr > .el-1 > .letter {
+            order: 2;
+            font-size: 400px;
+            margin-top: 300px;
+            position: absolute; } }
       .projects > .wr > .el-1 > .num {
         align-self: flex-start; }
+        @media (max-width: 768px) {
+          .projects > .wr > .el-1 > .num {
+            order: 1; } }
     .projects > .wr > .el-2 {
       position: relative;
       display: flex;
       flex-wrap: wrap;
       max-width: 900px; }
+      @media (max-width: 768px) {
+        .projects > .wr > .el-2 {
+          flex-direction: column;
+          align-items: flex-start; } }
       .projects > .wr > .el-2 a {
         display: block;
         margin-right: 50px;
@@ -185,13 +231,25 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%; }
+    @media (max-width: 768px) {
+      .team > .wr > .el-1 {
+        position: relative;
+        flex-direction: column; } }
     .team > .wr > .el-1 > .num {
       position: absolute;
       align-self: flex-start;
       left: 0; }
+      @media (max-width: 768px) {
+        .team > .wr > .el-1 > .num {
+          position: relative; } }
     .team > .wr > .el-1 > .letter {
       font-size: 900px;
       text-shadow: 0 58px 165px rgba(0, 0, 0, 0.45); }
+      @media (max-width: 768px) {
+        .team > .wr > .el-1 > .letter {
+          font-size: 400px;
+          line-height: 1;
+          margin-top: 100px; } }
   .team > .wr > .el-2 {
     position: relative; }
     .team > .wr > .el-2 ul {
@@ -201,16 +259,28 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between; }
+      @media (max-width: 768px) {
+        .team > .wr > .el-2 ul {
+          display: block;
+          margin-top: -100px; } }
       .team > .wr > .el-2 ul li {
         flex-basis: 50%;
         box-sizing: border-box;
         display: flex;
         align-items: flex-start; }
+        @media (max-width: 768px) {
+          .team > .wr > .el-2 ul li {
+            padding: 0 !important;
+            margin-bottom: 80px; } }
         .team > .wr > .el-2 ul li > .photo {
           max-width: 470px;
           position: relative;
           box-shadow: 0 178px 152px rgba(0, 0, 0, 0.45);
           transition: all 0.3s ease; }
+          @media (max-width: 768px) {
+            .team > .wr > .el-2 ul li > .photo {
+              width: 320px;
+              box-shadow: 0 50px 50px rgba(0, 0, 0, 0.45); } }
           .team > .wr > .el-2 ul li > .photo:hover {
             box-shadow: 0 30px 50px rgba(0, 0, 0, 0.45);
             transform: scale(0.9); }
@@ -221,6 +291,13 @@ header {
             position: absolute;
             bottom: 50px;
             width: 300px; }
+            @media (max-width: 768px) {
+              .team > .wr > .el-2 ul li > .photo .info {
+                position: relative;
+                bottom: auto !important;
+                left: auto !important;
+                padding: 15px;
+                width: auto; } }
             .team > .wr > .el-2 ul li > .photo .info:before {
               content: '';
               display: block;
@@ -234,6 +311,9 @@ header {
               font-weight: 100;
               margin-bottom: 15px;
               white-space: nowrap; }
+              @media (max-width: 768px) {
+                .team > .wr > .el-2 ul li > .photo .info > .name {
+                  white-space: normal; } }
             .team > .wr > .el-2 ul li > .photo .info > .spec {
               color: rgba(255, 255, 255, 0.5);
               font-family: Raleway-Light;
@@ -286,17 +366,36 @@ header {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; }
+      justify-content: center;
+      align-items: flex-start; }
+      @media (max-width: 768px) {
+        .event > .wr > .el-1 {
+          position: relative;
+          flex-direction: column;
+          align-items: center; } }
       .event > .wr > .el-1 .num {
         font-size: 200px;
         bottom: -140px;
         left: 60px;
         z-index: 1; }
+        @media (max-width: 768px) {
+          .event > .wr > .el-1 .num {
+            bottom: auto;
+            left: auto;
+            z-index: auto; } }
       .event > .wr > .el-1 .letter {
         position: absolute;
         font-size: 800px;
         line-height: 0.7;
         right: 100px; }
+        @media (max-width: 768px) {
+          .event > .wr > .el-1 .letter {
+            position: relative;
+            font-size: 500px;
+            right: auto;
+            line-height: 1;
+            margin-top: 50px;
+            text-shadow: 0 50px 150px rgba(0, 0, 0, 0.45); } }
     .event > .wr > .el-2 {
       min-height: 100vh;
       display: flex;
@@ -317,6 +416,7 @@ header {
         font-weight: 100;
         line-height: 1.5; }
     .event > .wr footer {
+      position: relative;
       width: 100%;
       align-self: flex-end;
       padding-bottom: 70px;
@@ -331,6 +431,8 @@ header {
           line-height: 36px;
           margin: 0 4px;
           color: rgba(255, 255, 255, 0.4); }
+          .event > .wr footer .links a:hover {
+            color: white; }
       .event > .wr footer .copy {
         font-family: Raleway-Light;
         font-size: 15px;
