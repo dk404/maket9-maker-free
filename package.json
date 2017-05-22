@@ -1,0 +1,28 @@
+{
+  "name": "maket9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssmin": "^0.1.7",
+    "loaders.css": "^0.1.2"
+
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shturnev/maket9-maker-free.git"
+  },
+  "author": "sht",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shturnev/maket9-maker-free/issues"
+  },
+  "homepage": "https://github.com/shturnev/maket9-maker-free#readme"
+}
