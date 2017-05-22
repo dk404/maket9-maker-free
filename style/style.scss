@@ -449,7 +449,9 @@ header{
 }
 .event{
   position: relative;
-  
+  background: no-repeat center / cover;
+
+
   &:before{
     content: '';
     width: 100%;
